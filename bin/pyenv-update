@@ -7,11 +7,11 @@ if [ -z "$PYENV_ROOT" ]; then
   PYENV_ROOT="${HOME}/.pyenv"
 fi
 
-REMOTE="${PYENV_REMOTE:-origin}"
+REMOTE="${PYENV_REMOTE:-upstream}"
 BRANCH="${PYENV_BRANCH}"
 
 BRANCH_CHOICE=
-ACCEPTED_BRANCHES="master main"
+ACCEPTED_BRANCHES="master main develop dev"
 
 verify_repo_remote() {
   ( cd "$1" && git remote show -n "${REMOTE}" 1>/dev/null 2>&1 )
